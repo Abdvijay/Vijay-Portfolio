@@ -1,5 +1,5 @@
 /**
-* Netlify Form Validation - Modified for Netlify Forms
+* Simple Netlify Form Handler
 */
 (function () {
   "use strict";
@@ -11,40 +11,35 @@
       event.preventDefault();
       
       let thisForm = this;
-      let formData = new FormData(thisForm);
       
-      // Show loading state
+      // Show loading
       thisForm.querySelector('.loading').classList.remove('d-none');
-      thisForm.querySelector('.loading').classList.add('d-block');
-      thisForm.querySelector('.error-message').classList.remove('d-block');
       thisForm.querySelector('.error-message').classList.add('d-none');
-      thisForm.querySelector('.sent-message').classList.remove('d-block');
       thisForm.querySelector('.sent-message').classList.add('d-none');
 
+      // Create form data
+      let formData = new FormData(thisForm);
+      
       // Submit to Netlify
-      fetch('/', {
+      fetch(thisForm.getAttribute('action'), {
         method: 'POST',
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
+        body: formData
       })
       .then(response => {
-        thisForm.querySelector('.loading').classList.remove('d-block');
         thisForm.querySelector('.loading').classList.add('d-none');
         
         if (response.ok) {
           thisForm.querySelector('.sent-message').classList.remove('d-none');
-          thisForm.querySelector('.sent-message').classList.add('d-block');
           thisForm.reset();
         } else {
-          throw new Error('Form submission failed');
+          throw new Error('Network response was not ok');
         }
       })
-      .catch((error) => {
-        thisForm.querySelector('.loading').classList.remove('d-block');
+      .catch(error => {
         thisForm.querySelector('.loading').classList.add('d-none');
         thisForm.querySelector('.error-message').innerHTML = 'Sorry, there was an error sending your message. Please try again.';
         thisForm.querySelector('.error-message').classList.remove('d-none');
-        thisForm.querySelector('.error-message').classList.add('d-block');
+        console.error('Error:', error);
       });
     });
   });

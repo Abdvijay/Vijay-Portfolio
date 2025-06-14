@@ -102,10 +102,12 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
         <p><em>I'm Vijayanarayanan, a passionate Computer Science graduate with a B.Sc. and an M.C.A. degree. I enjoy
-          building creative and functional applications, from AI-powered chatbots to engaging social web platforms. With
-          strong skills in Python, JavaScript, Java, HTML, and CSS, and MySQL I focus on crafting smart, user-friendly solutions
-          that make a real impact. I'm always eager to explore new technologies and take on exciting challenges in the
-          world of development.</em></p>
+            building creative and functional applications, from AI-powered chatbots to engaging social web platforms.
+            With
+            strong skills in Python, JavaScript, Java, HTML, and CSS, and MySQL I focus on crafting smart, user-friendly
+            solutions
+            that make a real impact. I'm always eager to explore new technologies and take on exciting challenges in the
+            world of development.</em></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -246,8 +248,9 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Education</h2>
           <p><em>I’m passionate about building meaningful software that solves real problems. I enjoy working through
-            challenges and turning complex ideas into simple, user-friendly solutions. With a focus on clean design and
-            efficient code, I aim to create projects that are both innovative and impactful.</em></p>
+              challenges and turning complex ideas into simple, user-friendly solutions. With a focus on clean design
+              and
+              efficient code, I aim to create projects that are both innovative and impactful.</em></p>
 
         </div><!-- End Section Title -->
 
@@ -322,10 +325,11 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Project Experience</h2>
-          <p><em>Worked on multiple academic and personal projects, applying programming knowledge to real-world scenarios.
-            Gained hands-on experience in web development, database handling, and UI/UX design. Contributed to both
-            individual and team-based projects, strengthening skills in problem-solving, collaboration, and full-cycle
-            software development.</em></p>
+          <p><em>Worked on multiple academic and personal projects, applying programming knowledge to real-world
+              scenarios.
+              Gained hands-on experience in web development, database handling, and UI/UX design. Contributed to both
+              individual and team-based projects, strengthening skills in problem-solving, collaboration, and full-cycle
+              software development.</em></p>
         </div><!-- End Section Title -->
 
         <!-- Projects Container -->
@@ -461,10 +465,12 @@
             </div>
 
             <div class="col-lg-7">
-              <form action="forms/php-email-form.php" method="post" class="php-email-form" data-aos="fade-up"
+              <form name="contact" method="POST" data-netlify="true" class="php-email-form" data-aos="fade-up"
                 data-aos-delay="200">
-                <div class="row gy-4">
+                <!-- Required for Netlify to detect the form -->
+                <input type="hidden" name="form-name" value="contact">
 
+                <div class="row gy-4">
                   <div class="col-md-6">
                     <label for="name-field" class="pb-2">Your Name</label>
                     <input type="text" name="name" id="name-field" class="form-control" required
@@ -494,11 +500,11 @@
                     <div class="error-message"></div>
                     <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                    <button class="send-message-btn" role="button">Send Message</button>
+                    <button class="send-message-btn" role="button" type="submit">Send Message</button>
                   </div>
-
                 </div>
               </form>
+
             </div>
             <!-- End Contact Form -->
 

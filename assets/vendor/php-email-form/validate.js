@@ -1,6 +1,5 @@
 /**
-* Netlify Form Validation - Modified from PHP Email Form Validation
-* Compatible with Netlify Forms
+* Netlify Form Validation - Modified for Netlify Forms
 */
 (function () {
   "use strict";

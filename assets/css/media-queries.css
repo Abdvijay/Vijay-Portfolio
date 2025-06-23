@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  /* Adjust styles for tablets and below */
+  body { font-size: 16px; }
+  /* Example: stack elements vertically */
+  .portfolio-item { width: 100%; }
+}
+@media (max-width: 480px) {
+  /* Adjust for smartphones */
+  .nav-menu { display: none; }
+  .hamburger-menu { display: block; }
+}

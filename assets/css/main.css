@@ -504,7 +504,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 50px;
+  padding: 60px 0;
   overflow: clip;
 }
 
@@ -1267,14 +1267,6 @@ section,
   color: var(--accent-color);
 }
 
-.profile-img-round-border {
-  border-radius: 0% !important;
-}
-
-.about-img-css {
-  max-width: 75%;
-}
-
 .portfolio-item {
   background: #fff;
   border-radius: 10px;
@@ -1314,58 +1306,4 @@ section,
   border-radius: 0px;
   font-size: 0.85rem;
   font-weight: 500;
-}
-
-.btn-outline-primary {
-  border-color: red;
-  color: red;
-  padding: 8px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-outline-primary:hover {
-  background-color: #000000;
-  color: white;
-  border-color: white;
-}
-
-.btn-outline-primary i {
-  margin-right: 8px;
-}
-
-.send-message-btn {
-  background-color: #0d172a;
-  border: 0 solid #e2e8f0;
-  border-radius: 1.5rem;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1;
-  padding: 1rem 1.6rem;
-  text-align: center;
-  text-decoration: none #0d172a solid;
-  text-decoration-thickness: auto;
-  transition: all .1s cubic-bezier(.4, 0, .2, 1);
-  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.send-message-btn:hover {
-  background-color: #f10a61;
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-  .send-message-btn {
-    font-size: 1.125rem;
-    padding: 1rem 2rem;
-  }
 }

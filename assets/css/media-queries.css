@@ -1,11 +1,143 @@
-@media (max-width: 768px) {
-  /* Adjust styles for tablets and below */
-  body { font-size: 16px; }
-  /* Example: stack elements vertically */
-  .portfolio-item { width: 100%; }
+/* Mobile Responsive Fixes */
+@media screen and (max-width: 768px) {
+  
+  /* Contact Section Fixes */
+  #contact {
+    position: static !important;
+    right: auto !important;
+    width: 100% !important;
+    padding: 0 10px;
+  }
+  
+  .info-wrap {
+    margin-bottom: 30px;
+  }
+  
+  .info-item {
+    margin-bottom: 20px;
+  }
+  
+  .info-item div {
+    flex: 1;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .info-item h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .info-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  
+  /* Portfolio Section Fixes */
+  .portfolio-item {
+    margin-bottom: 30px;
+  }
+  
+  .portfolio-content {
+    padding: 20px 15px;
+  }
+  
+  .portfolio-content h4 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+  }
+  
+  .portfolio-content .description {
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Tech Stack Badges */
+  .tech-stack {
+    margin: 15px 0;
+  }
+  
+  .tech-stack .badge {
+    font-size: 11px;
+    margin: 2px;
+    padding: 4px 8px;
+  }
+  
+  /* Resume Section Mobile Fix */
+  #resume {
+    position: static !important;
+    right: auto !important;
+  }
+  
+  .resume-item p {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Skills Section Mobile Fix */
+  #skills {
+    left: 0 !important;
+    position: static !important;
+  }
+  
+  /* General Container Fixes */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Map Responsive */
+  iframe {
+    width: 100% !important;
+    height: 200px !important;
+  }
 }
-@media (max-width: 480px) {
-  /* Adjust for smartphones */
-  .nav-menu { display: none; }
-  .hamburger-menu { display: block; }
+
+/* Extra Small Devices */
+@media screen and (max-width: 480px) {
+  .info-item p {
+    font-size: 13px;
+  }
+  
+  .portfolio-content .description {
+    font-size: 13px;
+  }
+  
+  .info-item h3 {
+    font-size: 16px;
+  }
+  
+  .portfolio-content h4 {
+    font-size: 16px;
+  }
+  
+  /* Header Profile fixes for small screens */
+  .profile-img {
+    margin-bottom: 15px;
+  }
+  
+  .sitename {
+    font-size: 18px !important;
+  }
+}
+
+/* Ensure text doesn't overflow containers */
+* {
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6, span, div {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
